@@ -31,6 +31,7 @@ pipeline{
         sh 'env'
         sh '''
         echo -e "//e[31m"
+        '''
       }
     }
   }
