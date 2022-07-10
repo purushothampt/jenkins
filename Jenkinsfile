@@ -4,7 +4,11 @@ pipeline{
   stages{
     stage ('One'){
       steps{
-        echo "one"
+        addShortText background: '', borderColor: '', color: '', link: '', text: 'ONE'
+        sh '''
+        echo hello1
+        echo hello2
+        '''
       }
     }
     stage ('two'){
