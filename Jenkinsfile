@@ -5,6 +5,11 @@ pipeline{
     ENV_URL = "pipeline.google.com"
     USER_PWD = credentials("SSH")
   }
+
+  options{
+    ansicolor('xterm')
+  }
+
   stages{
     stage ('One'){
       steps{
@@ -24,6 +29,8 @@ pipeline{
         echo "two"
         sh 'echo ENVURL = ${ENV_URL}'
         sh 'env'
+        sh '''
+        echo -e "//e[31m"
       }
     }
   }
