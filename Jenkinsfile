@@ -3,6 +3,7 @@ pipeline{
 
   environment{
     ENV_URL = "pipeline.google.com"
+    USER_PWD = credentials("SSH")
   }
   stages{
     stage ('One'){
@@ -22,6 +23,7 @@ pipeline{
       steps{
         echo "two"
         sh 'echo ENVURL = ${ENV_URL}'
+        sh 'env'
       }
     }
   }
