@@ -33,7 +33,7 @@ pipeline{
   stages{
     stage ('One'){
       when {
-        environment name: 'CHOICE', value: 'One'
+        environment name: 'CHOICE', value: 'Two'
       }
       steps{
         addShortText background: '', borderColor: '', color: '', link: '', text: 'ONE'
