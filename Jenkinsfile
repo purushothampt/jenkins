@@ -14,6 +14,9 @@ pipeline{
     pollSCM('*/2 * * * *' )
   }
 
+  tools{
+    maven-3.8.6
+    }
 
   parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
@@ -49,7 +52,7 @@ pipeline{
         sh '''
         echo -e "//e[31mHello"
         '''
-        sh 'mvn clean'
+        sh 'mvn --version'
       }
     }
   }
