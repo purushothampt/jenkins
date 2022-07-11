@@ -32,6 +32,9 @@ pipeline{
 
   stages{
     stage ('One'){
+      when {
+        environment name: 'CHOICE', value: 'One'
+      }
       steps{
         addShortText background: '', borderColor: '', color: '', link: '', text: 'ONE'
         sh '''
@@ -42,6 +45,10 @@ pipeline{
       }
     }
     stage ('two'){
+      when {
+        environment name: 'CHOICE', value: 'One'
+      }
+
       environment{
         ENV_URL = "stage.google.com"
       }
