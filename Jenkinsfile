@@ -79,7 +79,7 @@ pipeline {
     stages {
         stage('Non-Sequential Stage') {
           steps {
-            echo "On Non-Sequential Stage"
+            sh 'sleep 10'
           }
         }
         stage('Sequential') {
@@ -89,24 +89,24 @@ pipeline {
           stages {
             stage('In Sequential 1') {
               steps {
-                echo "In Sequential 1"
+                sh 'sleep 10'
               }
             }
             stage('In Sequential 2') {
               steps {
-                echo "In Sequential 2"
+                sh 'sleep 10'
               }
             }
             stage('Parallel In Sequential') {
               parallel {
                 stage('In Parallel 1') {
                   steps {
-                    echo "In Parallel 1"
+                    sh 'sleep 10'
                   }
                 }
                 stage('In Parallel 2') {
                   steps {
-                    echo "In Parallel 2"
+                    sh 'sleep 10'
                   }
                 }
               }
