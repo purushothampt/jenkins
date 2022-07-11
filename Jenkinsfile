@@ -15,7 +15,7 @@ pipeline{
   }
 
   tools{
-    maven-3.8.6
+    maven 'maven-3.8.6'
     }
 
   parameters {
