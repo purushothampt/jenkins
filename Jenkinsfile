@@ -49,6 +49,7 @@ pipeline{
         sh '''
         echo -e "//e[31mHello"
         '''
+        sh 'mvn clean'
       }
     }
   }
