@@ -78,12 +78,9 @@ pipeline {
     agent any
     stages {
         stage('Non-Sequential Stage') {
-            agent {
-                label 'for-non-sequential'
-            }
-            steps {
-                echo "On Non-Sequential Stage"
-            }
+          steps {
+            echo "On Non-Sequential Stage"
+          }
         }
         stage('Sequential') {
           environment {
