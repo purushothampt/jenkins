@@ -114,7 +114,13 @@ pipeline {
           }
         }
     }
+    post {
+      always{
+      cleanws()
+      }
+    }
 }
+
 
 // pipeline{
 //   agent any
