@@ -73,7 +73,7 @@ pipeline{
   }
   post{
     always{
-      cleanWs()
+      sh 'echo post'
     }
   }
 }
