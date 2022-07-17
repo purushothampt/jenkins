@@ -1,5 +1,9 @@
 pipeline{
-  agent any
+  agent{
+    node { label 'workstation'   // Agent node name
+    //label 'ansible'  //Agent Labels
+    }
+  }
 
   environment{
     ENV_URL = "pipeline.google.com"
